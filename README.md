@@ -212,6 +212,6 @@ This project was developed as a practical Python project to strengthen programmi
 
 ## Author
 
-**Yashaswini Yerramsetty**
+**Yerramsetti Sai Ramana Koushik**
 
 B.Tech Electronics and Communication Engineering Student
