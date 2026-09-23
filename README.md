@@ -1,13 +1,14 @@
+# Task Tracker Using Python
+
 ## Project URL
 
-[Task Tracker Project](https://github.com/yerramsettisairamanakoushik85-arch/shadowfox/tree/main)
-# Task Tracker Using Python
+https://roadmap.sh/projects/task-tracker
 
 ## Overview
 
-Task Tracker is a simple command-line application developed using Python. It helps users manage their daily tasks by allowing them to add, view, complete, and delete tasks.
+Task Tracker is a simple command-line application developed using Python. It helps users manage daily tasks by allowing them to add, view, complete, and delete tasks.
 
-This project is designed as a beginner-level Python project to practice basic programming concepts such as lists, dictionaries, loops, conditional statements, functions, and user input.
+This beginner-level project demonstrates practical Python programming concepts including lists, dictionaries, loops, conditional statements, user input, and exception handling.
 
 ## Features
 
@@ -16,6 +17,9 @@ This project is designed as a beginner-level Python project to practice basic pr
 - Mark tasks as completed
 - Delete tasks
 - Display task status as Pending or Completed
+- Handle invalid menu choices
+- Validate task numbers
+- Handle non-numeric task-number input without crashing
 - Simple command-line interface
 
 ## Technologies Used
@@ -37,9 +41,9 @@ Task-Tracker-Python/
 
 ### 1. Install Python
 
-Make sure Python is installed on your computer.
+Make sure Python is installed.
 
-Check the Python version using:
+Check the version:
 
 ```bash
 python --version
@@ -47,11 +51,11 @@ python --version
 
 ### 2. Open the Project
 
-Open the `Task-Tracker-Python` folder in VS Code.
+Open the project folder in VS Code or Command Prompt.
 
 ### 3. Run the Program
 
-Open the terminal in VS Code and run:
+From the project folder, run:
 
 ```bash
 python task_tracker.py
@@ -59,7 +63,7 @@ python task_tracker.py
 
 ## How the Program Works
 
-When the program starts, it displays a menu with five options:
+When the program starts, it displays:
 
 ```text
 ===== TASK TRACKER =====
@@ -70,11 +74,11 @@ When the program starts, it displays a menu with five options:
 5. Exit
 ```
 
-The user can select an option by entering the corresponding number.
+The user selects an option by entering the corresponding number.
 
 ### Add Task
 
-Select option `1` and enter the task.
+Select option `1`.
 
 Example:
 
@@ -86,7 +90,7 @@ Task added successfully.
 
 ### View Tasks
 
-Select option `2` to display all tasks.
+Select option `2`.
 
 Example:
 
@@ -107,7 +111,7 @@ Enter task number to complete: 1
 Task marked as completed.
 ```
 
-The status will change to:
+The status changes to:
 
 ```text
 1. Study Python - Completed
@@ -124,13 +128,23 @@ Enter task number to delete: 2
 Deleted: Complete project
 ```
 
-### Exit
+### Input Validation
 
-Select option `5` to close the application.
+The application handles invalid task-number input.
+
+For example, if the user enters:
 
 ```text
-Thank you for using Task Tracker.
+Enter task number to complete: abc
 ```
+
+the program displays:
+
+```text
+Please enter a valid number.
+```
+
+The program continues running instead of terminating with a Python error.
 
 ## Sample Output
 
@@ -145,13 +159,6 @@ Thank you for using Task Tracker.
 Enter your choice: 1
 Enter task: Learn Python
 Task added successfully.
-
-===== TASK TRACKER =====
-1. Add Task
-2. View Tasks
-3. Complete Task
-4. Delete Task
-5. Exit
 
 Enter your choice: 2
 
@@ -170,8 +177,6 @@ Your Tasks:
 
 ## Python Concepts Used
 
-This project demonstrates the use of:
-
 - Variables
 - Lists
 - Dictionaries
@@ -182,31 +187,32 @@ This project demonstrates the use of:
 - `append()` method
 - `pop()` method
 - `enumerate()` function
-- Basic error and input validation
+- `try-except` exception handling
+- Basic input validation
 
 ## Learning Outcomes
 
 By completing this project, I learned how to:
 
-- Create a basic Python command-line application
+- Create a Python command-line application
 - Accept and process user input
 - Store information using lists and dictionaries
 - Use loops and conditional statements
 - Update and delete data
+- Handle invalid user input
 - Build a simple menu-driven application
-- Organize a beginner-level Python project for GitHub
+- Organize a beginner-level project for GitHub
 
 ## Future Improvements
 
-The project can be improved by adding:
+Possible future improvements include:
 
-- Permanent task storage using a JSON or CSV file
+- Permanent task storage using JSON or CSV
 - Task due dates
 - Task priorities
 - Search and filter options
-- Better input validation
 - Edit task functionality
-- A graphical user interface
+- Graphical user interface
 - Database integration
 
 ## Project Purpose
@@ -215,6 +221,4 @@ This project was developed as a practical Python project to strengthen programmi
 
 ## Author
 
-**Yerramsetti Sai Ramana Koushik**
-
-B.Tech Electronics and Communication Engineering Student
+Koushik

@@ -12,8 +12,11 @@ while True:
 
     if choice == "1":
         task = input("Enter task: ")
-        tasks.append({"task": task, "completed": False})
-        print("Task added successfully.")
+        if task.strip():
+            tasks.append({"task": task, "completed": False})
+            print("Task added successfully.")
+        else:
+            print("Task cannot be empty.")
 
     elif choice == "2":
         if len(tasks) == 0:
@@ -28,25 +31,33 @@ while True:
         if len(tasks) == 0:
             print("No tasks available.")
         else:
-            number = int(input("Enter task number to complete: "))
+            try:
+                number = int(input("Enter task number to complete: "))
 
-            if 1 <= number <= len(tasks):
-                tasks[number - 1]["completed"] = True
-                print("Task marked as completed.")
-            else:
-                print("Invalid task number.")
+                if 1 <= number <= len(tasks):
+                    tasks[number - 1]["completed"] = True
+                    print("Task marked as completed.")
+                else:
+                    print("Invalid task number.")
+
+            except ValueError:
+                print("Please enter a valid number.")
 
     elif choice == "4":
         if len(tasks) == 0:
             print("No tasks available.")
         else:
-            number = int(input("Enter task number to delete: "))
+            try:
+                number = int(input("Enter task number to delete: "))
 
-            if 1 <= number <= len(tasks):
-                deleted_task = tasks.pop(number - 1)
-                print(f"Deleted: {deleted_task['task']}")
-            else:
-                print("Invalid task number.")
+                if 1 <= number <= len(tasks):
+                    deleted_task = tasks.pop(number - 1)
+                    print(f"Deleted: {deleted_task['task']}")
+                else:
+                    print("Invalid task number.")
+
+            except ValueError:
+                print("Please enter a valid number.")
 
     elif choice == "5":
         print("Thank you for using Task Tracker.")
